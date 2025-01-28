@@ -1,0 +1,159 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 100%;
+    max-width: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #444; 
+}
+
+th,
+td {
+    border: 2px solid #444; 
+    text-align: center;
+    padding: 12px 8px;
+}
+
+th {
+    background: linear-gradient(90deg, #4b79a1, #283e51);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+td {
+    font-size: 13px;
+    color: #444;
+    font-weight: 500;
+}
+
+td:hover {
+    background-color: #f0da77; 
+    transition: background-color 0.3s ease;
+}
+
+.highlight {
+    background-color: #fef9e6;
+    font-weight: bold;
+}
+
+.special {
+    background: #ffe0cc;
+    color: #7d2700;
+    font-weight: bold;
+}
+
+.date {
+    background-color: #3a6ea5; 
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.time {
+    background-color: #5c5c5c; 
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cdc {
+    background: #ffe4e1;
+    color: #b22222;
+    font-weight: bold;
+    border: 2px solid #b22222;
+}
+
+.lunch {
+    background: #ffefc2;
+    color: #8b5e00;
+    font-weight: 500;
+}
+
+.open-elective {
+    background: #d6e6ff;
+    color: #0b4f6c;
+    font-weight: bold;
+    border: 2px solid #0b4f6c; 
+}
+
+.oe-room {
+    background: #c5baff;
+    color: #372476;
+    font-weight: bold;
+    border: 2px solid #372476;
+}
+
+.lecture {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.lecture:hover {
+    background-color: transparent; 
+}
+
+.popup {
+    position: absolute;
+    z-index: 5;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform-origin: top left;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.lecture:hover .popup {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.lecture:hover .popup.right-edge {
+    left: auto;
+    right: 0;
+    transform: translateY(10px);
+}
+
+.lecture:hover .popup.bottom-edge {
+    top: auto;
+    bottom: 50%;
+    transform: translateY(-10px);
+}
+
+.popup.left-side {
+    left: auto;
+    right: 50%;
+  }
+
+  .popup.adjust-top {
+    top: auto;
+    bottom: 100%;
+  }
+
+  .column-highlight {
+    background-color: #f0f8ff; 
+    transition: background-color 0.3s ease;
+  }
